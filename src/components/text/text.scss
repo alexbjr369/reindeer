@@ -1,0 +1,11 @@
+@import '../../utilities/scss/utilities';
+
+.text {
+  padding-right: 18rem;
+  color: var(--#{$namespace}-color-secondary);
+  text-align: right;
+
+  &__heading {
+    font-size: 15rem;
+  }
+}

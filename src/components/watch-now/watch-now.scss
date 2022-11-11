@@ -1,0 +1,43 @@
+@import '../../utilities/scss/utilities';
+
+.watch-now {
+  display: flex;
+  align-items: center;
+  padding: 3.2rem 18rem 3.2rem 3.2rem;
+  background: var(--#{$namespace}-color-primary);
+
+  &:hover,
+  &:focus {
+    .watch-now__link {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .fa-play {
+      color: #fff;
+    }
+  }
+
+  &__link {
+    padding-bottom: 0.5rem;
+    color: #000;
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 0.3rem solid #000;
+    transition: border-color var(--#{$namespace}-transition-timing)
+        var(--#{$namespace}-transition-easing),
+      color var(--#{$namespace}-transition-timing)
+        var(--#{$namespace}-transition-easing);
+  }
+
+  .fa-play {
+    margin-right: 1.6rem;
+    color: #000;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color var(--#{$namespace}-transition-timing)
+      var(--#{$namespace}-transition-easing);
+  }
+}

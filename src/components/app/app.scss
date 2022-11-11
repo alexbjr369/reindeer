@@ -1,2 +1,24 @@
-@use 'sass:map';
-@import '../../utilities/scss/utilities';
+#app {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.watch-now-container {
+  display: flex;
+  justify-content: flex-end;
+}

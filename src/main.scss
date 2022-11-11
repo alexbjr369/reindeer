@@ -1,9 +1,9 @@
-@use 'sass:math';
 @import './utilities/scss/variables';
 
 :root {
-  --#{$namespace}-color-primary: #efde74;
+  --#{$namespace}-color-primary: #ffeb00;
   --#{$namespace}-color-primary-dark: #ead344;
+  --#{$namespace}-color-secondary: #494949;
   --#{$namespace}-text-color: #000;
   --#{$namespace}-background-color: #d8dbe2;
   --#{$namespace}-transition-timing: 0.2s;
@@ -26,10 +26,12 @@ html {
 }
 
 body {
-  font-family: 'Poppins';
-  background-color: var(--#{$namespace}-background-color);
-  box-sizing: border-box;
   overflow: hidden;
+  font-size: 1.6rem;
+  font-family: 'Montserrat';
+  background: url('./images/reindeer.png') no-repeat;
+  background-position: 50%;
+  background-size: cover;
 }
 
 ::selection {
@@ -37,18 +39,9 @@ body {
 }
 
 a {
-  color: var(--#{$namespace}-text-color);
-  border: 1px solid transparent;
-  transition: border-color var(--#{$namespace}-transition-timing)
-    var(--#{$namespace}-transition-easing);
-  display: inline-block;
+  text-decoration: none;
 
   &:focus {
     outline: none;
-    border-color: var(--#{$namespace}-text-color);
-  }
-
-  &:hover {
-    border-color: var(--#{$namespace}-text-color);
   }
 }

@@ -1,0 +1,19 @@
+@import '../../utilities/scss/utilities';
+
+.media {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.8rem;
+
+  &__item {
+    display: inline-block;
+    padding: 1.8rem;
+    color: var(--#{$namespace}-color-secondary);
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--#{$namespace}-color-primary);
+    }
+  }
+}

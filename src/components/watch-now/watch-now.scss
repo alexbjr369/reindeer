@@ -4,10 +4,14 @@
   display: flex;
   align-items: center;
   padding: 3.2rem 18rem 3.2rem 3.2rem;
-  background: var(--#{$namespace}-color-primary);
+  background-color: var(--#{$namespace}-color-primary);
+  transition: background-color var(--#{$namespace}-transition-timing)
+    var(--#{$namespace}-transition-easing);
 
   &:hover,
   &:focus {
+    background-color: var(--#{$namespace}-color-secondary);
+
     .watch-now__link {
       color: #fff;
       border-color: #fff;

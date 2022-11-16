@@ -14,7 +14,7 @@
     justify-content: center;
     color: #000;
     text-align: center;
-    background: var(--#{$namespace}-color-primary);
+    background-color: var(--#{$namespace}-color-primary);
 
     ::selection {
       color: #fff;
@@ -61,7 +61,7 @@
     &:hover,
     &:focus {
       color: #fff;
-      background: var(--#{$namespace}-color-secondary);
+      background-color: var(--#{$namespace}-color-secondary);
     }
   }
 

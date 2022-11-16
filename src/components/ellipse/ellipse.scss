@@ -5,74 +5,71 @@
   top: 50%;
   left: 50%;
   z-index: -1;
-  width: 608px;
-  height: 608px;
+  width: 60rem;
+  height: 60rem;
   margin: 0 auto;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 
   &__item {
     position: absolute;
-    top: 0;
+    top: 50%;
+    left: 50%;
     border-style: solid;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
 
     &_thin {
       width: 100%;
       height: 100%;
-      border-color: #494949;
+      border-color: var(--#{$namespace}-color-secondary);
       border-width: 1px;
       opacity: 0.5;
     }
 
     &_thick {
-      top: 12px;
-      left: 12px;
-      width: 93%;
-      height: 93%;
+      width: 90%;
+      height: 90%;
       border-color: #fff;
-      border-width: 10px;
-      transform: rotate(-45deg);
+      border-width: 1rem;
     }
 
     &_yellow {
-      top: 12px;
-      left: 12px;
-      width: 93%;
-      height: 93%;
-      border-color: #ffeb00 transparent;
+      width: 90%;
+      height: 90%;
+      border-color: var(--#{$namespace}-color-primary) transparent;
       border-width: 10px;
-      transform: rotate(-45deg);
+      transform: translate(0%, 0%);
       animation: ellipseRotate 15s ease-in-out infinite;
     }
   }
 
-  &__circle {
+  &__circle-container {
     position: absolute;
-    width: 64px;
-    height: 64px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    &_1 {
+      top: 15rem;
+      left: 15rem;
+    }
+
+    &_2 {
+      right: 13rem;
+      bottom: 15rem;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__circle {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
     border-color: rgba(0, 0, 0, 0.5);
     border-style: solid;
     border-width: 1px;
     border-radius: 50%;
-
-    &_1 {
-      top: 150px;
-      left: 150px;
-
-      .ellipse__text {
-        left: 75px;
-      }
-    }
-
-    &_2 {
-      right: 130px;
-      bottom: 150px;
-
-      .ellipse__text {
-        left: -90px;
-      }
-    }
 
     &::before,
     &::after {
@@ -87,31 +84,28 @@
 
     &::before {
       z-index: 1;
-      width: 12px;
-      height: 12px;
-      background: #fff;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: #fff;
     }
 
     &::after {
-      width: 40px;
-      height: 40px;
-      background: #ffeb00;
+      width: 4rem;
+      height: 4rem;
+      background-color: var(--#{$namespace}-color-primary);
     }
   }
 
   &__text {
-    position: absolute;
-    top: 25px;
-    width: 100px;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
 
 @keyframes ellipseRotate {
   0% {
-    transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
   100% {
-    transform: rotate(-405deg);
+    transform: translate(-50%, -50%) rotate(-405deg);
   }
 }

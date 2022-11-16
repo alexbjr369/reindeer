@@ -11,9 +11,11 @@
     color: var(--#{$namespace}-color-secondary);
     font-size: 2rem;
     cursor: pointer;
+    transition: background var(--#{$namespace}-transition-timing)
+      var(--#{$namespace}-transition-easing);
 
     &:hover {
-      background: var(--#{$namespace}-color-primary);
+      background-color: var(--#{$namespace}-color-primary);
     }
   }
 }

@@ -15,10 +15,8 @@ const ellipseSelector = 'ellipse-container';
 
 export const app = (element: HTMLDivElement) => {
   element.innerHTML = `
-  <aside id=${navSelector}></aside>
+    <aside id=${navSelector}></aside>
     <div class="container">
-
-
       <main class="main">
         <div id=${textSelector}></div>
         <div id=${watchnowSelector} class="watch-now-container"></div>

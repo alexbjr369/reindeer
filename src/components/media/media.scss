@@ -5,7 +5,7 @@
   justify-content: flex-end;
   padding: 1.8rem;
 
-  &__item {
+  &__link {
     display: inline-block;
     padding: 1.8rem;
     color: var(--#{$namespace}-color-secondary);
@@ -14,7 +14,8 @@
     transition: background var(--#{$namespace}-transition-timing)
       var(--#{$namespace}-transition-easing);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--#{$namespace}-color-primary);
     }
   }
